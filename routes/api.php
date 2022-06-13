@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\PengumumanApiController;
+use App\Http\Controllers\api\LoginController;
+// use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +17,6 @@ use App\Http\Controllers\PengumumanApiController;
 */
 
 Route::get('/pengumuman', 'PengumumanApiController@index');
+// Route::get('auth/index' [AuthController::class, 'index']);
+Route::get('auth/index', [LoginController::class, 'index']);
+Route::post('auth/login', [LoginController::class, 'login']);
